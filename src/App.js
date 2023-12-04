@@ -1,28 +1,26 @@
 import './App.css';
-import React from 'react';
-import Header from "./components/header/Header";
-import Home from "./components/home/Home";
-import About from "./components/about/About";
-import Features from "./components/features/Features";
-import Menu from "./components/menu/Menu";
-import Choose from "./components/choose/Choose";
-import Stats from "./components/stats/Stats";
-import Gallery from "./components/gallery/Gallery";
-import Team from "./components/team/Team";
+import { Routes, Route } from "react-router-dom";
+import React from "react";
+import Home from "./components/homePage/Home/Home";
 import Footer from "./components/footer/Footer";
+import NavBar from "./components/navBar/NavBar";
+import Login from "./components/loginPage/Login";
+import Cart from "./components/cartPage/Cart";
+import Register from "./components/registerPage/Register";
+import DetailProduct from "./components/detailPage/DetailProduct";
+
 
 function App() {
     return (
         <>
-            <Header/>
-            <Home/>
-            <About/>
-            <Features/>
-            <Menu/>
-            <Choose/>
-            <Stats/>
-            <Gallery/>
-            <Team/>
+            <NavBar/>
+            <Routes>
+                <Route path="/" element={<Home/>}/>
+                <Route path="/login" element={<Login/>}/>
+                <Route path="/cart" element={<Cart/>}/>
+                <Route path="/register" element={<Register/>}/>
+                <Route path="/detailProduct" element={<DetailProduct/>}/>
+            </Routes>
             <Footer/>
         </>
     );

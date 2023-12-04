@@ -1,176 +1,63 @@
-import React from "react";
-import logo from "../../assets/logo.png";
-import {FaRegEnvelope,
-        FaCaretRight,
-        FaFacebook,
-        FaTwitter,
-        FaLinkedinIn,
-        FaYoutube
-} from "react-icons/fa";
-
-import {AiOutlinePhone} from "react-icons/ai";
-import {MdOutlineLocationOn} from "react-icons/md";
-import "./Footer.css";
+import { NavLink } from "react-router-dom";
+import classes from "./Footer.module.css";
 
 const Footer = () => {
-    return(
-        <footer className="footer">
-            <div className="footer__grid container grid">
-                <div className="footer__content">
-                    <a href="/" className="footer__logo">
-                        <img src={logo} alt="" className="footer__logo-img"/>
-                    </a>
-
-                    <p className="footer__description">
-                        We are many variations of passages available but the majority have
-                        suffered alteration in some form by injected humor words which
-                        dont't look even slightly believale.
-                    </p>
-
-                    <ul className="footer__contact">
-                        <li className="footer__contact-item">
-                            <AiOutlinePhone className="icon"/> + 84 901 989 897
-                        </li>
-
-                        <li className="footer__contact-item">
-                            <MdOutlineLocationOn className="icon"/> 223 Hoai Thanh, Da Nang
-                        </li>
-
-                        <li className="footer__contact-item">
-                            <FaRegEnvelope className="icon"/> quocsang@gmail.com
-                        </li>
-                    </ul>
-                </div>
-
-                <div className="footer__content">
-                    <h3 className="footer__title">Quick Links</h3>
-
-                    <ul className="footer__links">
-                        <li>
-                            <a href="#about" className="footer__link">
-                                <FaCaretRight className="icon" /> About Us
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="#menu" className="footer__link">
-                                <FaCaretRight className="icon" /> Menu
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="#features" className="footer__link">
-                                <FaCaretRight className="icon" /> Features
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="#gallery" className="footer__link">
-                                <FaCaretRight className="icon" /> Gallery
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="#team" className="footer__link">
-                                <FaCaretRight className="icon" /> Team
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="#reservation" className="footer__link">
-                                <FaCaretRight className="icon" /> Reservation
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-
-                <div className="footer__content">
-                    <h3 className="footer__title">Opening Hours</h3>
-
-                    <div className="footer__opening-hour">
-                        <ul className="opening__hour-list">
-                            <li className="opening__hour-item">
-                                <span>Saturday:</span>
-                                <span>09AM - 06PM</span>
-                            </li>
-
-                            <li className="opening__hour-item">
-                                <span>Monday:</span>
-                                <span>09AM - 06PM</span>
-                            </li>
-
-                            <li className="opening__hour-item">
-                                <span>Tuesday:</span>
-                                <span>09AM - 06PM</span>
-                            </li>
-
-                            <li className="opening__hour-item">
-                                <span>Wednesday:</span>
-                                <span>09AM - 06PM</span>
-                            </li>
-
-                            <li className="opening__hour-item">
-                                <span>Thursday:</span>
-                                <span>09AM - 06PM</span>
-                            </li>
-
-                            <li className="opening__hour-item">
-                                <span>Friday:</span>
-                                <span>09AM - 06PM</span>
-                            </li>
-
-                            <li className="opening__hour-item">
-                                <span>Sunday:</span>
-                                <span>Closed</span>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div className="footer__content">
-                    <h3 className="footer__title">Newletter</h3>
-
-                    <p className="footer__description">
-                        Subscribe Our Newsletter To Get Latest Update And News
-                    </p>
-
-                    <form action="" className="subscribe__form">
-                        {/*<input type="text" placeholder="Your Email" className="form__input subscribe__input"/>*/}
-                        {/*<input type="text" placeholder="Your Email" className="form__input subscribe__input"/>*/}
-                        <button className="btn btn--flex subscribe__btn">
-                            <FaRegEnvelope/> Subscribe Now
-                        </button>
-                    </form>
-
-                    <div className="footer__socials">
-                        <h3 className="footer__social-follow">Follow Us:</h3>
-
-                        <div className="footer__social-links">
-                            <a href="/" className="footer__social-link">
-                                <FaFacebook/>
-                            </a>
-
-                            <a href="/" className="footer__social-link">
-                                <FaTwitter/>
-                            </a>
-
-                            <a href="/" className="footer__social-link">
-                                <FaLinkedinIn/>
-                            </a>
-
-                            <a href="/" className="footer__social-link">
-                                <FaYoutube/>
-                            </a>
-                        </div>
-                    </div>
-                </div>
+    //Chua cac link den cac trang gioi thieu, hien tai la hardcode
+    return (
+        <div className={classes.footer}>
+            <div>
+                <h2> CUSTOMER SERVICE</h2>
+                <ul className={classes.left}>
+                    <li>
+                        <NavLink to="#">Helps & Contact Us</NavLink>
+                    </li>
+                    <li>
+                        <NavLink to="#">Returns & Refunds</NavLink>
+                    </li>
+                    <li>
+                        <NavLink to="#">Online Stores</NavLink>
+                    </li>
+                    <li>
+                        <NavLink to="#">Terms & Conditions</NavLink>
+                    </li>
+                </ul>
             </div>
-
-            <p className="copyright__text">
-                &copy; Copyright 2023 <span>Coffero</span> All Rights Reserved.
-            </p>
-        </footer>
-    )
-}
+            <div>
+                <h2>COMPANY</h2>
+                <ul className={classes.middle}>
+                    <li>
+                        <NavLink to="#">What We Do</NavLink>
+                    </li>
+                    <li>
+                        <NavLink to="#">Available Services</NavLink>
+                    </li>
+                    <li>
+                        <NavLink to="#">Latest Posts</NavLink>
+                    </li>
+                    <li>
+                        <NavLink to="#">FAQs</NavLink>
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <h2>SOCIAL MEDIA</h2>
+                <ul className={classes.right}>
+                    <li>
+                        <NavLink to="#">Twitter</NavLink>
+                    </li>
+                    <li>
+                        <NavLink to="#">Instagram</NavLink>
+                    </li>
+                    <li>
+                        <NavLink to="#">Facebook</NavLink>
+                    </li>
+                    <li>
+                        <NavLink to="#">Pinterest</NavLink>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    );
+};
 
 export default Footer;
